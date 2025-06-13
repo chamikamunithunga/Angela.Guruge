@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: slideShow 36s infinite ease-in-out;
+  transition: background-image 1s ease-in-out;
+  position: relative;
+  padding: 0 1.5rem;
+}
+
+/* Keyframes to cycle through 6 background images */
+@keyframes slideShow {
+  0%      { background-image: url('../assets/1.jpg'); }
+  16.66%  { background-image: url('../assets/2.jpg'); }
+  33.32%  { background-image: url('../assets/8.jpg'); }
+  49.98%  { background-image: url('../assets/4.jpg'); }
+  66.64%  { background-image: url('../assets/7.jpg'); }
+  83.3%   { background-image: url('../assets/10.jpg'); }
+  100%    { background-image: url('../assets/1.jpg'); }
+}
+
+.hero h1 {
+  color: white;
+  font-size: 5rem;
+  font-family: 'Playfair Display', serif;
+  padding: 20px 40px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Tablet and below */
+@media screen and (max-width: 1024px) {
+  .hero h1 {
+    font-size: 3.5rem;
+    padding: 15px 30px;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 600px) {
+  .hero {
+    padding: 0 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    padding: 12px 20px;
+  }
+}
